@@ -1,9 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
 
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default;
 }
+.swiper-slide {
+  opacity: 0.4;
+  transform: scale(0.9);
+  transition: all 0.35s ease-in-out;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
@@ -17,5 +37,5 @@ body {
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  @apply bg-gray-200
+  @apply bg-gray-200;
 }
