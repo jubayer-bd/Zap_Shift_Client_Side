@@ -6,16 +6,26 @@ import user from "../assets/Others/image-upload-icon.png";
 import { FaStar } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/pagination";
+import img from "../assets/Others/customer-top.png";
 
 const Reviews = ({ reviewsPromise }) => {
   const reviews = use(reviewsPromise);
 
   return (
-    <div className="  py-16 ">
+    <div className="  ">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 ">
-          What Our Customers Say
+        <figure className="flex justify-center mb-10 items-center">
+          {" "}
+          <img src={img} alt="" />
+        </figure>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-5  text-gray-900 ">
+          What our customers are sayings
         </h2>
+        <p className="text-center text-secondary mb-12 max-w-200 mx-auto">
+          Enhance posture, mobility, and well-being effortlessly with Posture
+          Pro. Achieve proper alignment, reduce pain, and strengthen your body
+          with ease!
+        </p>
 
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -37,7 +47,11 @@ const Reviews = ({ reviewsPromise }) => {
               <div className="bg-white review-card transition-all duration-300 p-6 rounded-2xl shadow-lg border border-gray-200  h-full flex flex-col space-y-4 transform hover:-translate-y-2">
                 {/* Quote and Rating */}
                 <div className="flex justify-between items-center">
-                  <img src={quote} className="w-10 h-10" alt="quote" />
+                  <img
+                    src={quote}
+                    className="w-10 h-10 text-primary"
+                    alt="quote"
+                  />
                   <span className="flex items-center gap-1 text-yellow-400 font-semibold">
                     {item.ratings} <FaStar />
                   </span>
